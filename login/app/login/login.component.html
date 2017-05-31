@@ -1,7 +1,7 @@
 <ActionBar title="Login" class="action-bar">
 </ActionBar>
 <StackLayout class="page">
-    <FacebookLoginButton [login]="onLoginFacebook"></FacebookLoginButton>
+    <FacebookLoginButton (login)="onLoginFacebook($event)"></FacebookLoginButton>
     <Button text="Log in with Google +"></Button>
     <Label text="or"></Label>
 
