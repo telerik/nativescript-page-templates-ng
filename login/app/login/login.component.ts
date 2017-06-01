@@ -11,19 +11,16 @@ import * as Facebook from "nativescript-facebook";
 export class LoginComponent implements OnInit {
     email: string;
     password: string;
-    static that: LoginComponent;
 
     constructor(private routerExtensions: RouterExtensions) {
-        LoginComponent.that = this;
     }
 
     ngOnInit(): void {
     }
 
-    //TODO: static 'that' approach must be removed when nativescript-facebook plugin is fixed
-    onLoginFacebook(error: string, loginResponse: Facebook.LoginResponse) {
-        if (!error && loginResponse) {
-            LoginComponent.that.routerExtensions.navigate(["/home"], { clearHistory: true });
+    onLoginFacebook(eventData: Facebook.LoginEventData) {
+        if (!eventData.error) {
+            this.routerExtensions.navigate(["/home"], { clearHistory: true });
         }
     }
 
