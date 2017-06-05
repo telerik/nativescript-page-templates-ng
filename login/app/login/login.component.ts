@@ -18,12 +18,18 @@ export class LoginComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    onLoginFacebook(eventData: Facebook.LoginEventData) {
+    onLoginFacebookButtonTap(eventData: Facebook.LoginEventData) {
         if (!eventData.error) {
             this.routerExtensions.navigate(["/home"], { clearHistory: true });
         }
     }
 
-    onSignIn() {
+    onLoginGoogleButtonTap() {
+    }
+
+    onSignInButtonTap() {
+    }
+
+    onForgotPasswordTap() {
     }
 }
