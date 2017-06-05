@@ -1,12 +1,14 @@
 <ActionBar title="Login" class="action-bar">
 </ActionBar>
 <StackLayout class="page">
-    <FacebookLoginButton (login)="onLoginFacebook($event)"></FacebookLoginButton>
-    <Button text="Log in with Google +"></Button>
+    <FacebookLoginButton (login)="onLoginFacebookButtonTap($event)"></FacebookLoginButton>
+    <Button text="Log in with Google +" (tap)="onLoginGoogleButtonTap()"></Button>
     <Label text="or"></Label>
 
     <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalization="none" [(ngModel)]="email"></TextField>
     <TextField hint="Password" secure="true" autocorrect="false" autocapitalization="none" [(ngModel)]="password"></TextField>
 
-    <Button text="SIGN IN" (tap)="onSignIn()"></Button>
+    <Button text="SIGN IN" (tap)="onSignInButtonTap()"></Button>
+    <Label text="Forgot password?" (tap)="onForgotPasswordTap()"></Label>
+
 </StackLayout>
