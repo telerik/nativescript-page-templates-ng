@@ -1,0 +1,13 @@
+<ActionBar title="Sign up" class="action-bar">
+</ActionBar>
+<StackLayout class="page">
+    <FacebookLoginButton (login)="onSignupFacebookButtonTap($event)"></FacebookLoginButton>
+    <Button text="Sign up with Google +" (tap)="onLoginGoogleButtonTap()"></Button>
+    <Label text="or"></Label>
+
+    <TextField hint="Name" autocorrect="false" autocapitalization="none" [(ngModel)]="name"></TextField>
+    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalization="none" [(ngModel)]="email"></TextField>
+    <TextField hint="Password" secure="true" autocorrect="false" autocapitalization="none" [(ngModel)]="password"></TextField>
+
+    <Button text="SIGN UP" (tap)="onSignupButtonTap()"></Button>
+</StackLayout>
