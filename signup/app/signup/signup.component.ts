@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { RouterExtensions } from "nativescript-angular/router";
 
 import * as Facebook from "nativescript-facebook";
 
@@ -13,20 +12,17 @@ export class SignupComponent implements OnInit {
     email: string;
     password: string;
 
-    constructor(private routerExtensions: RouterExtensions) {
+    constructor() {
     }
 
     ngOnInit(): void {
         Facebook.init("1771472059772879");
     }
 
-    onSignupFacebookButtonTap(eventData: Facebook.LoginEventData) {
-        if (!eventData.error) {
-            this.routerExtensions.navigate(["/home"], { clearHistory: true });
-        }
+    onSignupFacebook(eventData: Facebook.LoginEventData) {
     }
 
-    onLogupGoogleButtonTap() {
+    onSignGoogleButtonTap() {
     }
 
     onSignupButtonTap() {
