@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        Facebook.init("1771472059772879");
     }
 
     onSignupFacebookButtonTap(eventData: Facebook.LoginEventData) {

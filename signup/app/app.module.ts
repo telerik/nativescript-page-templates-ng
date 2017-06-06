@@ -1,19 +1,9 @@
-import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
+import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
-import { AppRoutingModule } from "./app-routing.module";
+import { NSModuleFactoryLoader } from "nativescript-angular/router";
+
 import { AppComponent } from "./app.component";
-
-import { SignupComponent } from "./signup/signup.component";
-import { HomeComponent } from "./home/home.component";
-
-import { NativeScriptFacebookModule } from "nativescript-facebook/angular";
-
-import * as application from 'application';
-var nsFacebook = require('nativescript-facebook');
-
-application.on(application.launchEvent, function (args) {
-    nsFacebook.init("1771472059772879");
-});
+import { AppRoutingModule } from "./app-routing.module";
 
 @NgModule({
     bootstrap: [
@@ -21,13 +11,13 @@ application.on(application.launchEvent, function (args) {
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule,
-        NativeScriptFacebookModule
+        AppRoutingModule
     ],
     declarations: [
-        AppComponent,
-        SignupComponent,
-        HomeComponent
+        AppComponent
+    ],
+    providers: [
+        { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader }
     ],
     schemas: [
         NO_ERRORS_SCHEMA
