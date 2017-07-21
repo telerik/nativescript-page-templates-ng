@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 
-import * as Facebook from "nativescript-facebook";
-
 @Component({
     selector: "Login",
     moduleId: module.id,
@@ -15,13 +13,9 @@ export class LoginComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        Facebook.init("1771472059772879");
     }
 
-    onLogoutFacebook(eventData: Facebook.LoginEventData) {
-    }
-
-    onLoginFacebook(eventData: Facebook.LoginEventData) {
+    onLoginFacebookButtonTap() {
     }
 
     onLoginGoogleButtonTap() {
