@@ -1,11 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 
-import * as Facebook from "nativescript-facebook";
-
 @Component({
     selector: "Signup",
     moduleId: module.id,
-    templateUrl: "./signup.component.html",
+    templateUrl: "./signup.component.html"
 })
 export class SignupComponent implements OnInit {
     name: string;
@@ -13,18 +11,34 @@ export class SignupComponent implements OnInit {
     password: string;
 
     constructor() {
+        /* ***********************************************************
+        * Use the constructor to inject app services that will be needed for
+        * the whole signup layout as a whole.
+        *************************************************************/
     }
 
     ngOnInit(): void {
-        Facebook.init("1771472059772879");
+        /* ***********************************************************
+        * Use the "ngOnInit" handler to initialize data for the whole
+        * signup layout as a whole.
+        *************************************************************/
     }
 
-    onSignupFacebook(eventData: Facebook.LoginEventData) {
+    /* ***********************************************************
+    * TODO: Implement Facebook sign up.
+    *************************************************************/
+    onSignFacebookButtonTap(): void {
     }
 
-    onSignGoogleButtonTap() {
+    /* ***********************************************************
+    * TODO: Implement Google sign up.
+    *************************************************************/
+    onSignGoogleButtonTap(): void {
     }
 
-    onSignupButtonTap() {
+    /* ***********************************************************
+    * TODO: Implement custom sign up.
+    *************************************************************/
+    onSignupButtonTap(): void {
     }
 }
