@@ -1,7 +1,7 @@
 <ActionBar title="Sign up" class="action-bar">
 </ActionBar>
 <StackLayout class="page">
-    <FacebookLoginButton (login)="onSignupFacebook($event)"></FacebookLoginButton>
+    <Button text="Sign up with Facebook" (tap)="onSignFacebookButtonTap()"></Button>
     <Button text="Sign up with Google +" (tap)="onSignGoogleButtonTap()"></Button>
     <Label text="or"></Label>
 
