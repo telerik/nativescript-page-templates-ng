@@ -3,9 +3,13 @@ npm-debug.log
 
 *.js.map
 app/**/*.js
+**/*.css
 hooks/
 lib/
 node_modules/
 platforms/
 tmp/
 typings/
+.vscode
+.idea
+.cloud
