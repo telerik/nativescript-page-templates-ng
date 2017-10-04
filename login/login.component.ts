@@ -31,8 +31,8 @@ export class <%= PascalCaseName %>Component implements OnInit {
     onLoginWithSocialProvider(): void {
         /* ***********************************************************
         * For log in with social provider you can add your custom logic or
-        use NativeScript plugin for log in with Facebook
-        https://github.com/NativeScript/nativescript-facebook
+        * use NativeScript plugin for log in with Facebook
+        * http://market.nativescript.org/plugins/nativescript-facebook
         *************************************************************/
     }
 
