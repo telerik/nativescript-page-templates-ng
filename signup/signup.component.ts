@@ -29,15 +29,11 @@ export class <%= PascalCaseName %>Component implements OnInit {
         *************************************************************/
     }
 
-    onSignupFacebookButtonTap(): void {
+    onSignupWithSocialProvider(): void {
         /* ***********************************************************
-        * Call your Facebook signup logic here.
-        *************************************************************/
-    }
-
-    onSignupGoogleButtonTap(): void {
-        /* ***********************************************************
-        * Call your Google signup logic here.
+        * For sign up with social provider you can add your custom logic or
+        * use NativeScript plugin for sign up with Facebook
+        * http://market.nativescript.org/plugins/nativescript-facebook
         *************************************************************/
     }
 
