@@ -28,7 +28,7 @@ export class <%= PascalCaseName %>Component implements OnInit {
         *************************************************************/
     }
 
-    onLoginWithSocialProvider(): void {
+    onLoginWithSocialProviderButtonTap(): void {
         /* ***********************************************************
         * For log in with social provider you can add your custom logic or
         * use NativeScript plugin for log in with Facebook
